@@ -1,0 +1,7 @@
+#!/usr/bin/env node
+const debug = require('debug')('nodejs-api:bin/www');
+const app = require('../app');
+
+const server = app.listen(process.env.PORT || 3000, () => {
+  debug('Express server listening on port ' + server.address().port);
+});
